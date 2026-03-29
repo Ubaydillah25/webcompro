@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ComponyAbout;
+use App\Models\CompanyAbout;
 use Illuminate\Http\Request;
 
 class CompanyAboutController extends Controller
@@ -13,6 +13,8 @@ class CompanyAboutController extends Controller
     public function index()
     {
         //
+        $abouts = CompanyAbout::orderByDesc('id')->paginate(10);
+        return view('admin.abouts.index', compact('abouts'));
     }
 
     /**
@@ -34,7 +36,7 @@ class CompanyAboutController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ComponyAbout $componyAbout)
+    public function show(CompanyAbout $componyAbout)
     {
         //
     }
@@ -42,7 +44,7 @@ class CompanyAboutController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ComponyAbout $componyAbout)
+    public function edit(CompanyAbout $componyAbout)
     {
         //
     }
@@ -50,7 +52,7 @@ class CompanyAboutController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ComponyAbout $componyAbout)
+    public function update(Request $request, CompanyAbout $componyAbout)
     {
         //
     }
@@ -58,7 +60,7 @@ class CompanyAboutController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ComponyAbout $componyAbout)
+    public function destroy(CompanyAbout $componyAbout)
     {
         //
     }
