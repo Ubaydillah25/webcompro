@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ComponyKeypoint;
 use Illuminate\Http\Request;
 
-class ComponyKeypointController extends Controller
+class CompanyKeypointController extends Controller
 {
     /**
      * Display a listing of the resource.
