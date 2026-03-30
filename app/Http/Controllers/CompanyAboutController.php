@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreAboutRequest;
 use App\Models\CompanyAbout;
+use DB;
 use Illuminate\Http\Request;
 
 class CompanyAboutController extends Controller
@@ -33,6 +34,29 @@ class CompanyAboutController extends Controller
     public function store(StoreAboutRequest $request)
     {
         // insert kepada database tertentu
+        // closure-based transaction
+
+        DB::transaction(function () use ($request) {
+            $validated = $request->validated();
+
+            if ($request->hasFile('thumbnail')) {
+                $thumbnailPath = $request->file('thumbnail')->store('thumbnails', 'public');
+                $validated['thumbnail'] = $thumbnailPath;
+            }
+
+            $newAbout = CompanyAbout::create($validated);
+
+            if(!empty($validated['keypoints'])){
+                foreach($validated['keypoints'] as $keypoint){
+                    $newAbout->keypoints()->create([
+                        'keypoint' => $keypoint
+                    ]);
+                }
+            }
+
+        });
+
+        return redirect()->route('admin.abouts.index');
     }
 
     /**

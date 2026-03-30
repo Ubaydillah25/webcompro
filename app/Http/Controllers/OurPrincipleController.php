@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePrincipleRequest;
 use App\Models\OurPrinciple;
+use DB;
 use Illuminate\Http\Request;
 
 class OurPrincipleController extends Controller
@@ -33,6 +34,26 @@ class OurPrincipleController extends Controller
     public function store(StorePrincipleRequest $request)
     {
         // insert kepada database tertentu
+        // closure-based transaction
+
+        DB::transaction(function () use ($request) {
+            $validated = $request->validated();
+
+            if ($request->hasFile('icon')) {
+                $iconPath = $request->file('icon')->store('icons', 'public');
+                $validated['icon'] = $iconPath;
+            }
+
+            if ($request->hasFile('thumbnail')) {
+                $thumbnailPath = $request->file('thumbnail')->store('thumbnails', 'public');
+                $validated['thumbnail'] = $thumbnailPath;
+            }
+
+            $newPrinciple = OurPrinciple::create($validated);
+
+        });
+
+        return redirect()->route('admin.statistics.index');
     }
 
     /**

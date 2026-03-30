@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreTestimonialRequest;
 use App\Models\ProjectClient;
 use App\Models\Testimonial;
+use DB;
 use Illuminate\Http\Request;
 
 class TestimonialController extends Controller
@@ -35,6 +36,21 @@ class TestimonialController extends Controller
     public function store(StoreTestimonialRequest $request)
     {
         // insert kepada database tertentu
+        // closure-based transaction
+
+        DB::transaction(function () use ($request) {
+            $validated = $request->validated();
+
+            if ($request->hasFile('thumbnail')) {
+                $thumbnailPath = $request->file('thumbnail')->store('thumbnails', 'public');
+                $validated['thumbnail'] = $thumbnailPath;
+            }
+
+            $newTestimonial = Testimonial::create($validated);
+
+        });
+
+        return redirect()->route('admin.testimonials.index');
     }
 
     /**
