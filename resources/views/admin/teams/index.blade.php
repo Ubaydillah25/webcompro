@@ -35,7 +35,7 @@
                                 class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
                                 Edit
                             </a>
-                            <form action="{{ route('admin.teams.distroy', $team) }}" method="POST">
+                            <form action="{{ route('admin.teams.destroy', $team) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="font-bold py-4 px-6 bg-red-700 text-white rounded-full">

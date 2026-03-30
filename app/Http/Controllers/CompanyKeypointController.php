@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ComponyKeypoint;
+use App\Models\CompanyKeypoint;
 use Illuminate\Http\Request;
 
 class CompanyKeypointController extends Controller
@@ -34,7 +34,7 @@ class CompanyKeypointController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ComponyKeypoint $componyKeypoint)
+    public function show(CompanyKeypoint $companyKeypoint)
     {
         //
     }
@@ -42,7 +42,7 @@ class CompanyKeypointController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ComponyKeypoint $componyKeypoint)
+    public function edit(CompanyKeypoint $companyKeypoint)
     {
         //
     }
@@ -50,7 +50,7 @@ class CompanyKeypointController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ComponyKeypoint $componyKeypoint)
+    public function update(Request $request, CompanyKeypoint $companyKeypoint)
     {
         //
     }
@@ -58,7 +58,7 @@ class CompanyKeypointController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ComponyKeypoint $componyKeypoint)
+    public function destroy(CompanyKeypoint $companyKeypoint)
     {
         //
     }

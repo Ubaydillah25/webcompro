@@ -20,7 +20,7 @@
                             <img src="{{ Storage::url($hero_section->banner) }}" alt="" class="rounded-2xl object-cover w-[90px] h-[90px]">
                             <div class="flex flex-col">
                                 <h3 class="text-indigo-950 text-xl font-bold">
-                                    {{ $hero_section->achievement }}
+                                    {{ $hero_section->heading }}
                                 </h3>
                             </div>
                         </div>

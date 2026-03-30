@@ -17,7 +17,7 @@
                 @forelse ($clients as $client)
                     <div class="item-card flex flex-row justify-between items-center">
                         <div class="flex flex-row items-center gap-x-3">
-                            <img src="{{ Storage::url($clients->logo) }}" alt="" class="rounded-2xl object-cover w-[90px] h-[90px]">
+                            <img src="{{ Storage::url($clients->avatar) }}" alt="" class="rounded-2xl object-cover w-[90px] h-[90px]">
                             <div class="flex flex-col">
                                 <h3 class="text-indigo-950 text-xl font-bold">
                                     {{ $client->name }}
@@ -27,7 +27,7 @@
                         <div class="hidden md:flex flex-col">
                             <p class="text-slate-500 text-sm">Occupation</p>
                             <h3 class="text-indigo-950 text-xl font-bold">
-                                {{ $client->occupations }}
+                                {{ $client->occupation }}
                             </h3>
                         </div>
                         <div class="hidden md:flex flex-row items-center gap-x-3">
