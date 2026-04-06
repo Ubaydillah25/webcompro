@@ -8,11 +8,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-2">
-                            <div id="colorlib-logo"><a href="index.html">Law<span>firm.</span></a></div>
+                            <div id="colorlib-logo">
+                                {{-- <img src="{{ asset('images/logo.png')" alt="logo"> --}}
+                                <a href="#">Mahesa<span>Partnership.</span></a>
+                            </div>
                         </div>
                         <div class="col-md-10 text-right menu-1">
                             <ul>
-                                <li class="active"><a href="index.html">Home</a></li>
+                                <li class="active"><a href="#">Home</a></li>
                                 <li><a href="practice.html">Practice Areas</a></li>
                                 <li><a href="won.html">Won Cases</a></li>
                                 <li class="has-dropdown">
@@ -60,7 +63,8 @@
                                 <div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
                                     <div class="slider-text-inner">
                                         <h1>Your ultimate law &amp; legal Sulution</h1>
-                                        <h2>Visit our sites here! <a href="#" target="_blank">lawfirm.com</a></h2>
+                                        <h2>Visit our sites here! <a href="#" target="_blank">mahesa-lawyers.com</a>
+                                        </h2>
                                         <p><a class="btn btn-primary btn-lg btn-learn" href="#">Make An
                                                 Appointment</a></p>
                                     </div>
@@ -75,7 +79,7 @@
                                 <div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
                                     <div class="slider-text-inner">
                                         <h1>Defend Your Constitutional Right with Legal Help</h1>
-                                        <h2>Visit our sites here! <a href="#" target="_blank">lawfirm.com</a>
+                                        <h2>Visit our sites here! <a href="#" target="_blank">mahesa-lawyers.com</a>
                                         </h2>
                                         <p><a class="btn btn-primary btn-lg btn-learn" href="#">Make An
                                                 Appointment</a></p>
@@ -92,17 +96,25 @@
                 <div id="colorlib-intro">
                     <div class="third-col">
                         <span class="icon"><i class="icon-cog"></i></span>
-                        <h2>Need Legal Services?</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, iure delectus. Ab nihil est
-                            ut quae, atque, maiores omnis eius laudantium cumque quidem deleniti alias labore iure nulla
-                            vitae odit.</p>
+                        <h2>Mahesa Partnership</h2>
+                        <p>Advocates and Legal Consultants</p>
+                        <p>
+                        <ul>
+                            <li>CORPORATE AND COMMERCIAL</li>
+                            <li>CONSTRUCTION LAW</li>
+                            <li>LITIGATION AND ALTERNATIVE DISPUTE RESOLUTION</li>
+                        </ul>
+                        </p>
                     </div>
                     <div class="third-col third-col-color">
-                        <span class="icon"><i class="icon-old-phone"></i></span>
-                        <h2>Call now (+1) 0-123-789-4560</h2>
-                        <h2>Email us @ <a href="#">lawfirm@info</a></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, iure delectus. Ab nihil est
-                            ut quae, atque,</p>
+                        <ul>
+                            <li>LABOR LAW</li>
+                            <li>FINANCIAL TECHNOLOGY</li>
+                            <li>INTERNATIONAL REACH</li>
+                            <li>DEBT COLLECTION</li>
+                            <li>DEBT COLLECTION</li>
+                            <li>INTERNATIONAL ARBITRATION & DISPUTE RESOLUTION</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -119,8 +131,8 @@
                             <span class="icon">
                                 <img src="{{ Storage::url($statistic->icon) }}" alt="">
                             </span>
-                            <span class="colorlib-counter js-counter" data-from="0" data-to="{{ $statistic->goal }}" data-speed="5000"
-                                data-refresh-interval="50">
+                            <span class="colorlib-counter js-counter" data-from="0" data-to="{{ $statistic->goal }}"
+                                data-speed="5000" data-refresh-interval="50">
                             </span>
                             <span class="colorlib-counter-label">
                                 {{ $statistic->name }}
@@ -159,15 +171,18 @@
 
         <div id="colorlib-content">
             <div class="video colorlib-video" style="background-image: url(images/video.jpg);">
-                <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i
-                        class="icon-video2"></i></a>
+                <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video2"></i></a>
                 <div class="overlay"></div>
             </div>
             <div class="choose animate-box">
                 <div class="colorlib-heading">
-                    <h2>30 Years of experienced serving a high quality services</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts far from the countries Vokalia and Consonantia, there live the blind texts.
+                    <h2>16 Years of experienced serving a high quality services</h2>
+                    <p>Mahesa Partnership has the depth and breadth of Indonesian legal experience and
+                        knowledge to understand each client's problems, ask the questions the client has not thought
+                        to ask, and formulate appropriate solutions. When business decisions must be based on
+                        incomplete information, we advise our clients of the risks involved. Our expertise and
+                        judgment as legal practitioners play a vital role in helping clients minimize risk and achieve
+                        their business goals.
                     </p>
                 </div>
                 <div class="progress">
@@ -201,10 +216,10 @@
             <div class="container">
                 <div class="row animate-box">
                     <div class="col-md-8 col-md-offset-2 text-center colorlib-heading">
-                        <h2>Practice Area</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
-                            Semantics, a large language ocean.</p>
+                        <h2>THE PRACTICE AREA</h2>
+                        <p>As a general practice law firm, we provide you with a broad spectrum of legal matters. Our
+                            attorneys routinely work in cooperation to ensure that you receive the best legal
+                            representation possible.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -214,9 +229,9 @@
                                 <i class="flaticon-courthouse"></i>
                             </span>
                             <div class="desc">
-                                <h3><a href="#">Real Estate Law</a></h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                    unorthographic life</p>
+                                <h3><a href="#">Banking & Finance</a></h3>
+                                <p>Advising financial institutions and clients on banking regulations, financing structures,
+                                    and risk management.</p>
                             </div>
                         </div>
                     </div>
@@ -226,9 +241,9 @@
                                 <i class="flaticon-padlock"></i>
                             </span>
                             <div class="desc">
-                                <h3><a href="#">Insurance Law</a></h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                    unorthographic life</p>
+                                <h3><a href="#">Arbitration</a></h3>
+                                <p>Comprehensive legal services in aviation matters, including regulatory
+                                    compliance,licensing, and dispute handling.</p>
                             </div>
                         </div>
                     </div>
@@ -238,9 +253,9 @@
                                 <i class="flaticon-folder"></i>
                             </span>
                             <div class="desc">
-                                <h3><a href="#">Business Law</a></h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                    unorthographic life</p>
+                                <h3><a href="#">Aviation Law</a></h3>
+                                <p>Comprehensive legal services in aviation matters, including regulatory compliance,
+                                    licensing, and dispute handling.</p>
                             </div>
                         </div>
                     </div>
@@ -250,9 +265,8 @@
                                 <i class="flaticon-handcuffs"></i>
                             </span>
                             <div class="desc">
-                                <h3><a href="#">Personal Injury</a></h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                    unorthographic life</p>
+                                <h3><a href="#">Contracts & Agreements</a></h3>
+                                <p>Drafting, reviewing, and negotiating contracts to protect your business interests.</p>
                             </div>
                         </div>
                     </div>
@@ -262,9 +276,9 @@
                                 <i class="flaticon-handcuffs"></i>
                             </span>
                             <div class="desc">
-                                <h3><a href="#">Medical Neglegence</a></h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                    unorthographic life</p>
+                                <h3><a href="#">Information Technology</a></h3>
+                                <p>Advising on IT law, data protection, cybersecurity, and digital business compliance.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -274,9 +288,8 @@
                                 <i class="flaticon-libra"></i>
                             </span>
                             <div class="desc">
-                                <h3><a href="#">Criminal Defense</a></h3>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                    unorthographic life</p>
+                                <h3><a href="#">Litigation</a></h3>
+                                <p>Representing clients in court proceedings across civil and commercial disputes.</p>
                             </div>
                         </div>
                     </div>
@@ -294,7 +307,7 @@
             <div class="container">
                 <div class="row animate-box">
                     <div class="col-md-8 col-md-offset-2 text-center colorlib-heading colorlib-heading2">
-                        <h2>30 Years of Experienced in Various cases</h2>
+                        <h2>16 Years of Experienced in Various cases</h2>
                         <p>We help people effectively fight their offenders back and successfully defend their own
                             stand!</p>
                         <p><a href="#" class="btn btn-primary btn-lg">Consultation</a></p>
@@ -318,7 +331,7 @@
                                 <div class="item">
                                     <div class="testimony-slide active text-center">
                                         <figure>
-                                            <img src="{{ asset('assets/images/user-1.jpg') }}" alt="user">
+                                            <img src="{{ asset('images/user-1.jpg') }}" alt="user">
                                         </figure>
                                         <span>Jean Doe, via <a href="#" class="twitter">Twitter</a></span>
                                         <blockquote>
@@ -332,7 +345,7 @@
                                 <div class="item">
                                     <div class="testimony-slide active text-center">
                                         <figure>
-                                            <img src="{{ asset('assets/images/user-1.jpg') }}" alt="user">
+                                            <img src="{{ asset('images/user-1.jpg') }}" alt="user">
                                         </figure>
                                         <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
                                         <blockquote>
@@ -344,7 +357,7 @@
                                 <div class="item">
                                     <div class="testimony-slide active text-center">
                                         <figure>
-                                            <img src="{{ asset('assets/images/user-1.jpg') }}" alt="user">
+                                            <img src="{{ asset('images/user-1.jpg') }}" alt="user">
                                         </figure>
                                         <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
                                         <blockquote>
@@ -411,7 +424,7 @@
             </div>
         </div>
 
-        <div id="colorlib-blog">
+        {{-- // <div id="colorlib-blog">
             <div class="container">
                 <div class="row animate-box">
                     <div class="col-md-8 col-md-offset-2 text-center colorlib-heading">
@@ -423,7 +436,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="blog-featured animate-box">
-                            <a href="blog.html"><img class="img-responsive" src="{{ asset('assets/images/blog-1.jpg') }}"
+                            <a href="blog.html"><img class="img-responsive" src="{{ asset('images/blog-1.jpg') }}"
                                     alt=""></a>
                             <h2><a href="blog.html">Child Abuse Cases Are Our First Priority</a></h2>
                             <p class="meta"><span>Jan 5, 2017</span> | <span>3 Comments</span></p>
@@ -436,7 +449,7 @@
                             <div class="col-md-12 animate-box">
                                 <div class="blog-entry">
                                     <a href="blog.html" class="thumb"><img class="img-responsive"
-                                            src="{{ asset('assets/images/blog-2.jpg') }}" alt=""></a>
+                                            src="{{ asset('images/blog-2.jpg') }}" alt=""></a>
                                     <div class="desc">
                                         <h3><a href="blog.html">Family Law Is Now On Court</a></h3>
                                         <p class="meta"><span>Jan 5, 2017</span> | <span>3 Comments</span></p>
@@ -449,7 +462,7 @@
                             <div class="col-md-12 animate-box">
                                 <div class="blog-entry">
                                     <a href="blog.html" class="thumb"><img class="img-responsive"
-                                            src="{{ asset('assets/images/blog-3.jpg') }}" alt=""></a>
+                                            src="{{ asset('images/blog-3.jpg') }}" alt=""></a>
                                     <div class="desc">
                                         <h3><a href="blog.html">Family Law Is Now On Court</a></h3>
                                         <p class="meta"><span>Jan 5, 2017</span> | <span>3 Comments</span></p>
@@ -462,7 +475,7 @@
                             <div class="col-md-12 animate-box">
                                 <div class="blog-entry">
                                     <a href="blog.html" class="thumb"><img class="img-responsive"
-                                            src="{{ asset('assets/images/blog-1.jpg') }}" alt=""></a>
+                                            src="{{ asset('images/blog-1.jpg') }}" alt=""></a>
                                     <div class="desc">
                                         <h3><a href="blog.html">Family Law Is Now On Court</a></h3>
                                         <p class="meta"><span>Jan 5, 2017</span> | <span>3 Comments</span></p>
@@ -475,9 +488,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
-        <div id="colorlib-about">
+        {{-- <div id="colorlib-about">
             <div class="container">
                 <div class="row animate-box">
                     <div class="col-md-8 col-md-offset-2 text-center colorlib-heading">
@@ -489,7 +502,7 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
                         <div class="colorlib-staff">
-                            <img src="{{ asset('assets/images/user-2.jpg') }}" alt="Template">
+                            <img src="{{ asset('images/user-2.jpg') }}" alt="Template">
                             <h3>John Simon</h3>
                             <strong class="role">Counsel</strong>
                             <p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id
@@ -504,7 +517,7 @@
                     </div>
                     <div class="col-md-4 col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
                         <div class="colorlib-staff">
-                            <img src="{{ asset('assets/images/user-2.jpg') }}" alt="Template">
+                            <img src="{{ asset('images/user-2.jpg') }}" alt="Template">
                             <h3>John Doe</h3>
                             <strong class="role">Head of International Practice</strong>
                             <p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id
@@ -519,7 +532,7 @@
                     </div>
                     <div class="col-md-4 col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
                         <div class="colorlib-staff">
-                            <img src="{{ asset('assets/images/user-2.jpg') }}" alt="Template">
+                            <img src="{{ asset('images/user-2.jpg') }}" alt="Template">
                             <h3>Peter Washington</h3>
                             <strong class="role">Managing Partner, Attorney</strong>
                             <p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id
@@ -534,16 +547,16 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <footer id="colorlib-footer" role="contentinfo">
             <div class="container">
-                <div class="row row-pb-md">
-                    <div class="col-md-3 colorlib-widget">
+                <div class="row row-pb-md text-center">
+                    {{-- <div class="col-md-3 colorlib-widget">
                         <h4>Lawfirm</h4>
                         <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta
                             adipisci architecto culpa amet.</p>
-                    </div>
+                    </div> --}}
                     <div class="col-md-3 col-md-push-1">
                         <h4>Navigation</h4>
                         <ul class="colorlib-footer-links">
@@ -558,9 +571,9 @@
                     <div class="col-md-3 col-md-push-1">
                         <h4>Contact Information</h4>
                         <ul class="colorlib-footer-links">
-                            <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li>
-                            <li><a href="tel://1234567920">+ 1235 2355 98</a></li>
-                            <li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
+                            <li>JL. HR. RASUNA SAID, KUNINGAN <br> JAKARTA SELATAN 12940, INDONESIA</li>
+                            {{-- <li><a href="tel://1234567920">+ 1235 2355 98</a></li> --}}
+                            <li><a href="mailto:mahesa.bangun@mahesa-lawyers.com">mahesa.bangun@mahesa-lawyers.com</a></li>
                         </ul>
                     </div>
 
@@ -578,10 +591,12 @@
                 <div class="row copyright">
                     <div class="col-md-12 text-center">
                         <p>
-                            <small class="block">&copy; 2018 LawFirm. All Rights Reserved. Created by <a
-                                    href="https://colorlib.com/" target="_blank">Colorlib</a></small>
-                            <small class="block">Distributed by: <a href="https://themewagon.com/"
-                                    target="_blank">ThemeWagon</a></small>
+                            <small class="block">&copy; 2026 Mahesa Partnership.
+                                {{-- All Rights Reserved. Created by
+                                <a href="#">Ubaydillah</a> --}}
+                                </small>
+                            {{-- <small class="block">Distributed by: <a href="https://themewagon.com/"
+                                    target="_blank">ThemeWagon</a></small> --}}
                         </p>
                         <p>
                         <ul class="colorlib-social-icons">
