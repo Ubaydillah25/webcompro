@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreTestimonialRequest;
+use App\Http\Requests\UpdateTestimonialRequest;
 use App\Models\ProjectClient;
 use App\Models\Testimonial;
 use DB;
@@ -45,9 +46,8 @@ class TestimonialController extends Controller
                 $thumbnailPath = $request->file('thumbnail')->store('thumbnails', 'public');
                 $validated['thumbnail'] = $thumbnailPath;
             }
-
+            // dd($request->all(), $request->validated());
             $newTestimonial = Testimonial::create($validated);
-
         });
 
         return redirect()->route('admin.testimonials.index');
@@ -66,15 +66,29 @@ class TestimonialController extends Controller
      */
     public function edit(Testimonial $testimonial)
     {
+        $clients = ProjectClient::orderByDesc('id')->get();
         //
+        return view('admin.testimonials.edit', compact('testimonial', 'clients'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Testimonial $testimonial)
+    public function update(UpdateTestimonialRequest $request, Testimonial $testimonial)
     {
         //
+         DB::transaction(function () use ($request, $testimonial) {
+            $validated = $request->validated();
+
+            if ($request->hasFile('thumbnail')) {
+                $thumbnailPath = $request->file('thumbnail')->store('thumbnails', 'public');
+                $validated['thumbnail'] = $thumbnailPath;
+            }
+            // dd($request->all(), $request->validated());
+            $testimonial->update($validated);
+        });
+
+        return redirect()->route('admin.testimonials.index');
     }
 
     /**
@@ -83,5 +97,9 @@ class TestimonialController extends Controller
     public function destroy(Testimonial $testimonial)
     {
         //
+        DB::transaction(function () use ($testimonial) {
+            $testimonial->delete();
+        });
+        return redirect()->route('admin.testimonials.index');
     }
 }

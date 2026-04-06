@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('testimonials', function (Blueprint $table) {
             $table->id();
             $table->string('thumbnail');
-            $table->string('massage');
+            $table->string('message');
             $table->foreignId('project_client_id')->constrained()->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();

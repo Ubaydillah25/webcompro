@@ -25,6 +25,7 @@ class StoreTestimonialRequest extends FormRequest
             //
             'message' => ['required', 'string', 'max:255'],
             'project_client_id' => ['required', 'string', 'max:255'],
+            // 'project_client_id' => ['required', 'integer', 'exists:project_clients,id'],
             'thumbnail' => ['required', 'image', 'mimes:png,jpg,jpeg'],
         ];
     }

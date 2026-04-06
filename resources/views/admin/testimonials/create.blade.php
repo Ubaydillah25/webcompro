@@ -22,14 +22,14 @@
                         <x-input-label for="project_client" :value="__('project_client')" />
 
                         <select name="project_client_id" id="project_client_id"
-                            class="py-3 rounded-lg pl-3 w-full border border-slate-300">
+                            class="py-3 rounded-lg pl-3 w-full border border-slate-300" required>
                             <option value="">Choose project_client</option>
                             @foreach ($clients as $client)
                                 <option value="{{ $client->id }}">{{ $client->name }}</option>
                             @endforeach
                         </select>
 
-                        <x-input-error :messages="$errors->get('project_client')" class="mt-2" />
+                        <x-input-error :messages="$errors->get('project_client_id')" class="mt-2" />
                     </div>
 
                     <div class="mt-4">

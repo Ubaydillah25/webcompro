@@ -55,6 +55,12 @@ class RolePermissonSeeder extends Seeder
             'password' => bcrypt('123123123')
         ]);
 
+        $user = User::create([
+            'name' => 'Admin',
+            'email' => 'admin@admin.com',
+            'password' => bcrypt('123abc!@#')
+        ]);
+
         $user->assignRole($superAdminRole);
     }
 }

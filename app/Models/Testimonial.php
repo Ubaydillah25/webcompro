@@ -13,7 +13,7 @@ class Testimonial extends Model
     protected $fillable = [
         'message',
         'thumbnail',
-        'product_client_id',
+        'project_client_id',
     ];
 
     public function client(){
