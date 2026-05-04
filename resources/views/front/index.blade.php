@@ -3,41 +3,8 @@
     <div class="colorlib-loader"></div>
 
     <div id="page">
-        <nav class="colorlib-nav" role="navigation">
-            <div class="top-menu">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div id="colorlib-logo">
-                                {{-- <img src="{{ asset('images/logo.png')" alt="logo"> --}}
-                                <a href="#">Mahesa<span>Partnership.</span></a>
-                            </div>
-                        </div>
-                        <div class="col-md-10 text-right menu-1">
-                            <ul>
-                                <li class="active"><a href="#">Home</a></li>
-                                <li><a href="practice.html">Practice Areas</a></li>
-                                <li><a href="won.html">Won Cases</a></li>
-                                <li class="has-dropdown">
-                                    <a href="blog.html">Blog</a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">menu 1</a></li>
-                                        <li><a href="#">menu 2</a></li>
-                                        <li><a href="#">menu 3</a></li>
-                                        <li><a href="#">menu 4</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                                <li class="btn-cta"><a href="#"><span>Make an Appointment</span></a></li>
-                                <!-- <li class="btn-cta"><a href="#"><span>Sign Up</span></a></li> -->
-                            </ul>
-                        </div>
-                    </div>
 
-                </div>
-            </div>
-        </nav>
+        <x-navbar />
 
         <aside id="colorlib-hero" class="js-fullheight">
             <div class="flexslider js-fullheight">
@@ -100,20 +67,34 @@
                         <p>Advocates and Legal Consultants</p>
                         <p>
                         <ul>
-                            <li>CORPORATE AND COMMERCIAL</li>
-                            <li>CONSTRUCTION LAW</li>
-                            <li>LITIGATION AND ALTERNATIVE DISPUTE RESOLUTION</li>
+                            <li>ARBITRATION</li>
+                            <li>CONSTRUCTION AND ENGINEERING</li>
+                            <li>CONTRAQCTS/AGREEMENTS</li>
+                            <li>GENERAL CORPORATE</li>
+                            <li>LABOR AND EMPLOYMENT</li>
+                            <li>FRANCHISING</li>
+                            <li>INFORMATION TECNOLOGY</li>
+                            <li>INTERNATIONAL TRADE</li>
+                            <li>FOREIGN DIRECT INVESTMENT</li>
+                            <li>JOINT VENTURE</li>
                         </ul>
                         </p>
                     </div>
                     <div class="third-col third-col-color">
                         <ul>
-                            <li>LABOR LAW</li>
-                            <li>FINANCIAL TECHNOLOGY</li>
-                            <li>INTERNATIONAL REACH</li>
-                            <li>DEBT COLLECTION</li>
-                            <li>DEBT COLLECTION</li>
-                            <li>INTERNATIONAL ARBITRATION & DISPUTE RESOLUTION</li>
+                            <li>LAND AND AGRARTIAN</li>
+                            <li>LEASING AND EQUIPMENT</li>
+                            <li>MARITIME</li>
+                            <li>MEDIA</li>
+                            <li>MERGERS AND ACQUISITIONS</li>
+                            <li>PRIVATIZATION</li>
+                            <li>PROJECT AND INFRASTRUCTURE FINANCING</li>
+                            <li>REAL ESTATE</li>
+                            <li>TELECOMUNICATION</li>
+                            <li>FAMILOY LAW</li>
+                            <li>DEBT RESTRUCTURING</li>
+                            <li>COMPONY RESTURING</li>
+                            <li>LITIGATION</li>
                         </ul>
                     </div>
                 </div>
@@ -139,32 +120,8 @@
                             </span>
                         </div>
                     @empty
-                        <p>Belum ada data terbatu</p>
+                        <p>Belum ada data terbaru</p>
                     @endforelse
-                    {{-- <div class="col-md-3 text-center animate-box">
-                        <span class="icon"><i class="flaticon-lawyer-1"></i></span>
-                        <span class="colorlib-counter js-counter" data-from="0" data-to="1539" data-speed="5000"
-                            data-refresh-interval="50"></span>
-                        <span class="colorlib-counter-label">Qualified Lawyer</span>
-                    </div>
-                    <div class="col-md-3 text-center animate-box">
-                        <span class="icon"><i class="flaticon-courthouse"></i></span>
-                        <span class="colorlib-counter js-counter" data-from="0" data-to="3653" data-speed="5000"
-                            data-refresh-interval="50"></span>
-                        <span class="colorlib-counter-label">Trusted Clients</span>
-                    </div>
-                    <div class="col-md-3 text-center animate-box">
-                        <span class="icon"><i class="flaticon-libra"></i></span>
-                        <span class="colorlib-counter js-counter" data-from="0" data-to="5987" data-speed="5000"
-                            data-refresh-interval="50"></span>
-                        <span class="colorlib-counter-label">Successful Case</span>
-                    </div>
-                    <div class="col-md-3 text-center animate-box">
-                        <span class="icon"><i class="flaticon-police-badge"></i></span>
-                        <span class="colorlib-counter js-counter" data-from="0" data-to="3999" data-speed="5000"
-                            data-refresh-interval="50"></span>
-                        <span class="colorlib-counter-label">Honor &amp; Awards</span>
-                    </div> --}}
                 </div>
             </div>
         </div>
@@ -328,45 +285,23 @@
                     <div class="col-md-10 col-md-offset-1">
                         <div class="row animate-box">
                             <div class="owl-carousel owl-carousel-fullwidth">
-                                <div class="item">
-                                    <div class="testimony-slide active text-center">
-                                        <figure>
-                                            <img src="{{ asset('images/user-1.jpg') }}" alt="user">
-                                        </figure>
-                                        <span>Jean Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                        <blockquote>
-                                            <p>&ldquo;Far far away, behind the word mountains, far from the countries
-                                                Vokalia and Consonantia, there live the blind texts. Separated they live
-                                                in Bookmarksgrove right at the coast of the Semantics, a large language
-                                                ocean.&rdquo;</p>
-                                        </blockquote>
+                                @forelse ($testimonials as $testimonial)
+                                    <div class="item">
+                                        <div class="testimony-slide active text-center">
+                                            <figure>
+                                                <img src="{{ Storage::url($testimonial->client->avatar) }}"
+                                                    alt="user">
+                                            </figure>
+                                            <span>{{ $testimonial->client->name }}
+                                                <a>{{ $testimonial->client->occupation }}</a></span>
+                                            <blockquote>
+                                                <p>{{ $testimonial->message }}</p>
+                                            </blockquote>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="item">
-                                    <div class="testimony-slide active text-center">
-                                        <figure>
-                                            <img src="{{ asset('images/user-1.jpg') }}" alt="user">
-                                        </figure>
-                                        <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                        <blockquote>
-                                            <p>&ldquo;Separated they live in Bookmarksgrove right at the coast of the
-                                                Semantics, a large language ocean.&rdquo;</p>
-                                        </blockquote>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="testimony-slide active text-center">
-                                        <figure>
-                                            <img src="{{ asset('images/user-1.jpg') }}" alt="user">
-                                        </figure>
-                                        <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                        <blockquote>
-                                            <p>&ldquo;Far from the countries Vokalia and Consonantia, there live the
-                                                blind texts. Separated they live in Bookmarksgrove right at the coast of
-                                                the Semantics, a large language ocean.&rdquo;</p>
-                                        </blockquote>
-                                    </div>
-                                </div>
+                                @empty
+                                    <p>Belum ada data terbaru</p>
+                                @endforelse
                             </div>
                         </div>
                     </div>
@@ -424,131 +359,6 @@
             </div>
         </div>
 
-        {{-- // <div id="colorlib-blog">
-            <div class="container">
-                <div class="row animate-box">
-                    <div class="col-md-8 col-md-offset-2 text-center colorlib-heading">
-                        <h2>Recent Post</h2>
-                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem
-                            provident. Odit ab aliquam dolor eius.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="blog-featured animate-box">
-                            <a href="blog.html"><img class="img-responsive" src="{{ asset('images/blog-1.jpg') }}"
-                                    alt=""></a>
-                            <h2><a href="blog.html">Child Abuse Cases Are Our First Priority</a></h2>
-                            <p class="meta"><span>Jan 5, 2017</span> | <span>3 Comments</span></p>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                unorthographic life One day however</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-12 animate-box">
-                                <div class="blog-entry">
-                                    <a href="blog.html" class="thumb"><img class="img-responsive"
-                                            src="{{ asset('images/blog-2.jpg') }}" alt=""></a>
-                                    <div class="desc">
-                                        <h3><a href="blog.html">Family Law Is Now On Court</a></h3>
-                                        <p class="meta"><span>Jan 5, 2017</span> | <span>3 Comments</span></p>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and
-                                            Consonantia</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 animate-box">
-                                <div class="blog-entry">
-                                    <a href="blog.html" class="thumb"><img class="img-responsive"
-                                            src="{{ asset('images/blog-3.jpg') }}" alt=""></a>
-                                    <div class="desc">
-                                        <h3><a href="blog.html">Family Law Is Now On Court</a></h3>
-                                        <p class="meta"><span>Jan 5, 2017</span> | <span>3 Comments</span></p>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and
-                                            Consonantia</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 animate-box">
-                                <div class="blog-entry">
-                                    <a href="blog.html" class="thumb"><img class="img-responsive"
-                                            src="{{ asset('images/blog-1.jpg') }}" alt=""></a>
-                                    <div class="desc">
-                                        <h3><a href="blog.html">Family Law Is Now On Court</a></h3>
-                                        <p class="meta"><span>Jan 5, 2017</span> | <span>3 Comments</span></p>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and
-                                            Consonantia</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-
-        {{-- <div id="colorlib-about">
-            <div class="container">
-                <div class="row animate-box">
-                    <div class="col-md-8 col-md-offset-2 text-center colorlib-heading">
-                        <h2>Our Attorneys</h2>
-                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem
-                            provident. Odit ab aliquam dolor eius.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
-                        <div class="colorlib-staff">
-                            <img src="{{ asset('images/user-2.jpg') }}" alt="Template">
-                            <h3>John Simon</h3>
-                            <strong class="role">Counsel</strong>
-                            <p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id
-                                repellat velit eaque aspernatur expedita. Possimus itaque adipisci.</p>
-                            <ul class="colorlib-social-icons">
-                                <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                                <li><a href="#"><i class="icon-github"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
-                        <div class="colorlib-staff">
-                            <img src="{{ asset('images/user-2.jpg') }}" alt="Template">
-                            <h3>John Doe</h3>
-                            <strong class="role">Head of International Practice</strong>
-                            <p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id
-                                repellat velit eaque aspernatur expedita. Possimus itaque adipisci.</p>
-                            <ul class="colorlib-social-icons">
-                                <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                                <li><a href="#"><i class="icon-github"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 text-center animate-box" data-animate-effect="fadeIn">
-                        <div class="colorlib-staff">
-                            <img src="{{ asset('images/user-2.jpg') }}" alt="Template">
-                            <h3>Peter Washington</h3>
-                            <strong class="role">Managing Partner, Attorney</strong>
-                            <p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id
-                                repellat velit eaque aspernatur expedita. Possimus itaque adipisci.</p>
-                            <ul class="colorlib-social-icons">
-                                <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                                <li><a href="#"><i class="icon-github"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-
         <footer id="colorlib-footer" role="contentinfo">
             <div class="container">
                 <div class="row row-pb-md text-center">
@@ -594,9 +404,7 @@
                             <small class="block">&copy; 2026 Mahesa Partnership.
                                 {{-- All Rights Reserved. Created by
                                 <a href="#">Ubaydillah</a> --}}
-                                </small>
-                            {{-- <small class="block">Distributed by: <a href="https://themewagon.com/"
-                                    target="_blank">ThemeWagon</a></small> --}}
+                            </small>
                         </p>
                         <p>
                         <ul class="colorlib-social-icons">

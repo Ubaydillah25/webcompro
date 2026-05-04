@@ -14,6 +14,11 @@ use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontController::class, 'index'])->name('front.index');
+Route::get('/paractice', [FrontController::class, 'paractice'])->name('front.paractice');
+Route::get('/client', [FrontController::class, 'client'])->name('front.client');
+Route::get('/affiliaton', [FrontController::class, 'affiliaton'])->name('front.affiliaton');
+Route::get('/career', [FrontController::class, 'career'])->name('front.career');
+Route::get('/contact', [FrontController::class, 'contact'])->name('front.contact');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
